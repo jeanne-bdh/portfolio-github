@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "sass": "^1.94.2",
+    "sass-loader": "^16.0.6"
+  },
+  "scripts": {
+    "watch": "sass --watch sass:assets/css",
+    "build": "sass sass:assets/css"
+  }
+}
