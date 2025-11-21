@@ -28,6 +28,22 @@ class Home {
     }
 
     async getRepo() {
+        const response = await fetch('/.netlify/functions/github')
+        const data = await response.json()
+
+        const recentsProjects = data.slice(-3)
+
+        for (let i = 0; i < recentsProjects.length; i++) {
+            const languagesUrl = recentsProjects[i].languages_url
+            const resLang = await fetch(languagesUrl).then(r => r.json())
+            recentsProjects[i].languages = resLang
+        }
+
+        this.updateAllProjects(recentsProjects)
+    }
+
+    /*
+    async getRepo() {
         const octokit = new Octokit()
         const response = await octokit
             .request("GET /users/jeanne-bdh/repos")
@@ -35,8 +51,23 @@ class Home {
                 console.error("Erreur lors de l'appel API", error)
             })
 
-        this.updateAllProjects(response.data)
+        const recentsProjects = response.data.slice(-3)
+
+        for (let i = 0; i < recentsProjects.length; i++) {
+            const languagesUrl = recentsProjects[i].languages_url
+            const responseLanguages = await octokit
+                .request(`GET ${languagesUrl}`)
+                .catch((error) => {
+                    console.error("Erreur lors de l'appel API", error)
+                })
+
+            const projectLanguages = responseLanguages.data
+            recentsProjects[i].languages = projectLanguages
+
+        }
+        this.updateAllProjects(recentsProjects)
     }
+        */
 
     updateGithubProfil(APIdata) {
         this.profilGithub.setAttribute("href", APIdata.html_url)
@@ -48,16 +79,16 @@ class Home {
 
         for (let i = 0; i < 3; i++) {
             const repo = ProjetsData[i];
-
             this.reposTitle[htmlIndex].textContent = repo.name;
             this.reposDescription[htmlIndex].textContent = repo.description;
-
-            const titleProject = repo.name;
-            const descriptionProject = repo.description;
-            const languages = repo.topics;
-            
+            this.createLanguageTag(this.reposTags[i], repo.languages);
             htmlIndex++
         }
+    }
+
+    createLanguageTag(div, languages) {
+        console.log('language', languages)
+        console.log('div', div)
     }
 }
 
