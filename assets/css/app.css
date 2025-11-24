@@ -146,4 +146,13 @@ a {
   object-fit: cover;
 }
 
+p,
+h2 {
+  color: #dadada;
+}
+
+.js-home-repo-tag {
+  color: #dadada;
+}
+
 /*# sourceMappingURL=app.css.map */

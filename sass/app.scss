@@ -5,9 +5,8 @@
 
 @use "page/home";
 
-@use "abstracts/variables";
-@use "abstracts/mixins";
-@use "abstracts/functions";
+@use "abstracts/main";
 
 @use "components/button";
 @use "components/hero";
+@use "components/text";
