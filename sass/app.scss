@@ -3,6 +3,11 @@
 
 @use "layout/header";
 
+@use "page/home";
+
 @use "abstracts/variables";
+@use "abstracts/mixins";
+@use "abstracts/functions";
 
 @use "components/button";
+@use "components/hero";

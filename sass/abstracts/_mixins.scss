@@ -1,0 +1,12 @@
+@mixin font($font-size, $font-weight) {
+    font-family: 'Inter', sans-serif;
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+
+@mixin cicle ($size) {
+    width: $size;
+    height: $size;
+    border-radius: 100%;
+    overflow: hidden;
+}
