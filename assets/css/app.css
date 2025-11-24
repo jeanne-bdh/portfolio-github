@@ -74,8 +74,32 @@ a {
   justify-content: center;
   align-items: center;
 }
-.header__home-contact {
+.header__icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.button, .button--secondary {
   background-color: #373737;
+  border-radius: 0.25rem;
+  color: #dadada;
+  padding: 0.5rem 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.button--secondary {
+  border: solid 2px #dadada;
+  background-color: transparent;
+}
+.button__icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.button__label {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=app.css.map */
