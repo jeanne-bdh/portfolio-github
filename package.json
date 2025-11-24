@@ -6,5 +6,8 @@
   "scripts": {
     "watch": "sass --watch sass:assets/css",
     "build": "sass sass:assets/css"
+  },
+  "dependencies": {
+    "octokit": "^5.0.5"
   }
 }

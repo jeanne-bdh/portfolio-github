@@ -1,4 +1,4 @@
-import { Octokit } from "https://esm.sh/octokit";
+//import { Octokit } from "https://esm.sh/octokit";
 
 class Home {
     constructor() {
@@ -30,11 +30,10 @@ class Home {
     async getRepo() {
         const response = await fetch('/.netlify/functions/github')
         const data = await response.json()
-
         const recentsProjects = data.slice(-3)
 
         for (let i = 0; i < recentsProjects.length; i++) {
-            const languagesUrl = recentsProjects[i].languages_url
+            const languagesUrl = recentsProjects[i].languages_url;
             const resLang = await fetch(languagesUrl).then(r => r.json())
             recentsProjects[i].languages = resLang
         }
@@ -87,8 +86,13 @@ class Home {
     }
 
     createLanguageTag(div, languages) {
-        console.log('language', languages)
-        console.log('div', div)
+        const arrayLanguages = Object.keys(languages);
+        for (let i = 0; i < arrayLanguages.length; i++) {
+            const span = document.createElement('span');
+            span.textContent = arrayLanguages[i];
+            div.appendChild(span);
+        }
+        console.log(arrayLanguages)
     }
 }
 
