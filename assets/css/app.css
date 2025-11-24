@@ -59,8 +59,9 @@ a {
 
 /* Colors */
 .header {
-  background-color: #212121;
+  background-color: #484848;
   border-radius: 0.5rem;
+  margin: 2rem;
   padding: 0.75rem;
   display: flex;
   justify-content: space-between;
@@ -70,7 +71,7 @@ a {
   height: 2rem;
   border-radius: 100%;
   overflow: hidden;
-  background-color: #373737;
+  background-color: #7B7B7B;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,21 +81,51 @@ a {
   height: 1rem;
 }
 
+.footer {
+  background-color: #484848;
+  border-radius: 0.5rem;
+  margin: 2rem;
+  padding: 1.5rem;
+}
+
 .home {
-  background-color: #1e1e1e;
+  background-color: #191919;
+}
+
+.projects {
+  background-color: #484848;
+  border-radius: 0.5rem;
+  margin: 2rem;
+  padding: 2rem;
+}
+.projects__card {
+  background-color: #7B7B7B;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 2rem 0;
+}
+.projects__items {
+  display: flex;
+  align-items: center;
+}
+.projects__subtitle {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
 }
 
 .button, .button--secondary {
-  background-color: #373737;
+  background-color: #7B7B7B;
   border-radius: 0.25rem;
-  color: #dadada;
+  color: #EEEEEE;
   padding: 0.5rem 0.75rem;
   display: inline-flex;
   align-items: center;
   column-gap: 0.5rem;
 }
 .button--secondary {
-  border: solid 2px #dadada;
+  border: solid 2px #EEEEEE;
   background-color: transparent;
 }
 .button__icon {
@@ -108,22 +139,24 @@ a {
 }
 
 .hero {
+  background-color: #484848;
+  border-radius: 0.5rem;
+  margin: 2rem;
   position: relative;
-  background-color: #212121;
-  color: #dadada;
-  padding: 4.4375rem 2rem 5rem;
+  color: #EEEEEE;
+  padding: 4.5rem 2rem 5rem;
 }
 .hero__subtitle {
   font-family: "Inter", sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
-  margin-bottom: 2.1875rem;
+  margin-bottom: 2rem;
 }
 .hero__title {
   font-family: "Inter", sans-serif;
   font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 2.1875rem;
+  margin-bottom: 2rem;
 }
 .hero__description {
   font-family: "Inter", sans-serif;
@@ -133,10 +166,10 @@ a {
 }
 .hero__photo {
   position: absolute;
-  top: 1.375rem;
-  right: -0.9375rem;
-  width: 8.5625rem;
-  height: 8.5625rem;
+  top: 2.5rem;
+  right: 3.5rem;
+  width: 8.5rem;
+  height: 8.5rem;
   border-radius: 100%;
   overflow: hidden;
 }
@@ -148,11 +181,11 @@ a {
 
 p,
 h2 {
-  color: #dadada;
+  color: #EEEEEE;
 }
 
 .js-home-repo-tag {
-  color: #dadada;
+  color: #EEEEEE;
 }
 
 /*# sourceMappingURL=app.css.map */

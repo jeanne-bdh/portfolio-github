@@ -11,6 +11,7 @@
   "workspace": {
     "packageJson": {
       "dependencies": [
+        "npm:octokit@^5.0.5",
         "npm:sass-loader@^16.0.6",
         "npm:sass@^1.94.2"
       ]

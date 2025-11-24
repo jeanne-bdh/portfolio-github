@@ -1,12 +1,20 @@
+@use "variables" as var;
+
 @mixin font($font-size, $font-weight) {
     font-family: 'Inter', sans-serif;
     font-size: $font-size;
     font-weight: $font-weight;
 }
 
-@mixin cicle ($size) {
+@mixin circle ($size) {
     width: $size;
     height: $size;
     border-radius: 100%;
     overflow: hidden;
+}
+
+@mixin greyBlock () {
+    background-color: var.$grey;
+    border-radius: 0.5rem;
+    margin: 2rem;
 }

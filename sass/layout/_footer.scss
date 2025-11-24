@@ -1,0 +1,7 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mixin;
+
+.footer {
+    @include mixin.greyBlock();
+    padding: 1.5rem;
+}

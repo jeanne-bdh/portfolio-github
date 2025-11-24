@@ -2,10 +2,12 @@
 @use "base/reset-custom";
 
 @use "layout/header";
+@use "layout/footer";
 
 @use "page/home";
 
-@use "abstracts/main";
+@use "abstracts/variables";
+@use "abstracts/mixins";
 
 @use "components/button";
 @use "components/hero";

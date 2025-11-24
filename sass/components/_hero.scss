@@ -1,31 +1,32 @@
-@use "../abstracts/main" as abs;
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mixin;
 
 .hero {
+    @include mixin.greyBlock();
     position: relative;
-    background-color: abs.$grey;
-    color: abs.$white;
-    padding: abs.Rem(71) 2rem 5rem;
+    color: var.$white;
+    padding: 4.5rem 2rem 5rem;
 
     &__subtitle {
-        @include abs.font(0.75rem, 600);
-        margin-bottom: abs.Rem(35);
+        @include mixin.font(0.75rem, 600);
+        margin-bottom: 2rem;
     }
 
     &__title {
-        @include abs.font(2rem, 600);
-        margin-bottom: abs.Rem(35);
+        @include mixin.font(2rem, 600);
+        margin-bottom: 2rem;
     }
 
     &__description {
-        @include abs.font(0.75rem, 400);
-        margin-bottom: abs.Rem(32);
+        @include mixin.font(0.75rem, 400);
+        margin-bottom: 2rem;
     }
 
     &__photo {
         position: absolute;
-        top: abs.Rem(22);
-        right: abs.Rem(-15);
-        @include abs.cicle(abs.Rem(137));
+        top: 2.5rem;
+        right: 3.5rem;
+        @include mixin.circle(8.5rem);
 
         img {
             width: 100%;
